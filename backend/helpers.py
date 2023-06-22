@@ -13,6 +13,8 @@ class HelperFunctions:
    init_every_request = False
    
    def __init__(self):
+        # we use an in memory vector database for demos. 
+        #for permanent storage look into weaviate or pinecone
         self.vectorstore = None
 
    def construct_prompt(self, query):
@@ -21,6 +23,7 @@ class HelperFunctions:
       for doc in docs:
         context += doc.page_content
 
+      # you can change the instructions to the bot here e.g replace SOMA with your preferrer name
       header = """
       You're a helpful assistant called SOMA.
       Answer the question as truthfully as possible using the provided context, 
