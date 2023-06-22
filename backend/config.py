@@ -1,5 +1,4 @@
 OPENAI_API_KEY = ""
-WEAVIATE_HOST = ""
 APP_SECRET_KEY =""
 # FILE 
 ALLOWED_FILE_EXTENSIONS = ["pdf", "docx", "txt"]
